@@ -2,8 +2,6 @@
 
 #include <math.h>
 #include <stdio.h>
-#include <string.h>
-#include <unistd.h>
 
 float A, B, C;
 float cubeWitdh = 10.0f;

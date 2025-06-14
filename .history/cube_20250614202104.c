@@ -2,15 +2,11 @@
 
 #include <math.h>
 #include <stdio.h>
-#include <string.h>
-#include <unistd.h>
 
 float A, B, C;
 float cubeWitdh = 10.0f;
-float width = 100.0f;
-float zBuffer[160*44];
-char buffer[160*44];
-int backgrounfASCIICode = ' ';
+float wtdth = 100.0f;
+float zBuffer[1760];
 
 float calculateX(int i, int j, int k) {
   return j * sin(A) * sin(B) * cos(C) - k * cos(A) * sin(B) * cos(C) +
@@ -32,8 +28,6 @@ int main() {
   while (1)
   {
     /* code */
-    memset(buffer, backgrounfASCIICode, width* height);
-    memset(zBuffer, 0, width * height * 4);
   }
   
   return 0;
