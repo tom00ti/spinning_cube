@@ -6,15 +6,11 @@
 #include <unistd.h>
 
 float A, B, C;
-float cubeWidth = 10.0f;
+float cubeWitdh = 10.0f;
 float width = 100.0f;
 float zBuffer[160 * 44];
 char buffer[160 * 44];
 int backgrounfASCIICode = ' ';
-
-float incrementSpeed = 0.6f;
-
-float x,y,z;
 
 float calculateX(int i, int j, int k) {
   return j * sin(A) * sin(B) * cos(C) - k * cos(A) * sin(B) * cos(C) +
@@ -32,7 +28,7 @@ float calculateZ(int i, int j, int k) {
 }
 
 void calculateForFace(float cubeX, float cubeY, float cubeZ, int ch){
-
+  
 }
 
 int main() {
@@ -41,10 +37,10 @@ int main() {
     /* code */
     memset(buffer, backgrounfASCIICode, width * height);
     memset(zBuffer, 0, width * height * 4);
-    for (float cubeX = -cubeWidth; cubeX < cubeWidth; cubeX += incrementSpeed) {
-      for (float cubeY = -cubeWidth; cubeY < cubeWidth;
+    for (float cubeX = -cubeWitdh; cubeX < cubeWidth; cubeX += incrementSpeed) {
+      for (float cubeY = -cubeWitdh; cubeY < cubeWidth;
            cubeY += incrementSpeed) {
-            calculateForFace(cubeX, cubeY, -cubeWidth, '#');
+            calculateForFace(cubeX, cubeY, -cubeWitdh, '#');
       }
     }
 
